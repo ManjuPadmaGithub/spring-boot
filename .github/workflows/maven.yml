@@ -35,6 +35,8 @@ jobs:
   
     steps:
     - uses: actions/checkout@v4
+    - name: Print Railway Token (For Debugging)
+      run: echo ${{ secrets.RAILWAY_TOKEN }}
     - name: Debug Print
       run: echo ${{ secrets.RAILWAY_TOKEN }}
     - name: Railway Deploy
