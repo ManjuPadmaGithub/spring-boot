@@ -31,7 +31,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-
+    needs: build  # This ensures that the deploy job runs after the build job completes
     steps:
     - uses: actions/checkout@v4
     - name: Railway Deploy
